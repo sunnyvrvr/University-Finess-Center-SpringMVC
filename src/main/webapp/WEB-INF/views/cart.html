@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../resources/css/cart.css" />
+    <script src="/resources/js/cart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <title>카트</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidenav">
+        <img src="/resources/image/logo.jpg" class="img" />
+        <a href="./notice" id="notice">공지사항</a>
+        <a href="./health" id="health">헬스장이용 신청</a>
+        <a href="./gxprogram" id="gxprogram">GX 프로그램 신청</a>
+        <a href="./locker" id="locker">라커 신청</a>
+        <a href="./cart" id="cart">장바구니</a>
+        <a href="./myhistory" id="spacing">나의 이용 내역</a>
+
+        <a href="./signup" id="signupBtn">회원가입</a>
+        <a href="./login" id="loginBtn">로그인</a>
+ <!--   <a href="./mypage" id="myPageBtn">마이페이지</a>  -->
+        <a href="./logout" id="logoutBtn">로그아웃</a>
+      </div>
+      <div class="main-content">
+        <div class="page-title">
+          <h2>장바구니</h2>
+        </div>
+        <div class="page-content">
+          <!--장바구니 문단처럼 처리하기-->
+          <div class="cart_part">
+            <table class="ctable" >
+              <thead>
+                <tr>
+                  <th>프로그램썸네일</th>
+                  <th>프로그램명</th>
+                  <th>수강년월</th>
+                  <th>결제 가격</th>
+                  <th>시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumbnail">
+                      <img src="" alt="" />
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <!--카트 하나씩 노출-->
+          </div>
+          <!--카트영역-->
+        <button class="purchase-btn" id="purchasebtn">결제</button>
+        </div>
+        <!--페이지 영역-->
+      </div>
+    </div>
+  </body>
+</html>

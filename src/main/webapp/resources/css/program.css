@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  display: flex;
+  height: 100%;
+}
+/*사이드바 영역 정하기*/
+.sidenav {
+  width: 20%; /*사이드바 폭*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcedaa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: none;
+}
+/*메인영역 폭 정하기*/
+.main-content {
+  margin-left: 30px;
+  width: 80%; /*메인영역 폭*/
+/*  background-color: #fdf5e6;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 55px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #363636;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: #a9cfe2;
+}
+/*메뉴 시작 상단 간격 띄우기*/
+#notice {
+  margin-top: 50px;
+}
+
+/*개인정보에 해당하는 영역 간격 띄우기*/
+#spacing {
+  margin-bottom: 30px; /* 원하는 간격만큼의 값을 설정 */
+}
+
+/*사이드바버튼 이미지*/
+.sidenav img {
+  display: block;
+  text-align: center;
+  /*  vertical-align: middle;*/
+  margin: auto;
+  padding-top: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-height: 45px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 158px;
+  }
+}
+.page-content {
+  vertical-align: middle;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/*상단영역-가로처리*/
+.top-content {
+  height: 40%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.bottom-content {
+  padding-top: 30px;
+  height: 60%;
+}
+
+/*프로그램 이미지*/
+.image-content {
+  width: 35%;
+  padding: 10px;
+  box-sizing: border-box
+}
+
+.thumbnail {
+  margin: 5px;
+}
+
+.thumbnail > img {
+  width: 300px;
+  height: 300px;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%;
+}
+
+/*프로그램 정보*/
+.basic-content {
+  width: 65%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* 프로그램명, 가격, 장바구니 추가 버튼 스타일 */
+.programname,
+.programprice {
+  font-size: 16px;
+  font-weight: normal;
+  color: #363636;
+  margin-left: 10px;
+}
+
+#addcart {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#addcart:hover {
+  background-color: #45a049;
+}
+
+/* 하단 컨텐츠 영역 스타일 */
+.bottom-content {
+  padding-top: 20px;
+}
+
+/* 프로그램 정보 스타일 */
+.programcenter,
+.programmaxcapacity,
+.programtime,
+.programdetail {
+  margin-left: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #363636;
+}

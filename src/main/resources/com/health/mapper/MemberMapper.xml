@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.health.mapper.MemberMapper">
+	<!--C 회원가입 SQL -->
+	<insert parameterType="com.health.domain.MemberVO" id="insert">
+		<![CDATA[
+		INSERT INTO member
+		(loginId, pwd, studentId, mStatus, name, phone, email, accountBank, accountNo) 
+		VALUES 
+		(#{loginId}, #{pwd}, #{studentId}, #{mStatus}, #{name}, #{phone}, #{email}, #{accountBank}, #{accountNo})
+		]]>
+	</insert>
+	<!--R 로그인 마이페이지 SQL -->
+	<select resultType="com.health.domain.MemberVO" parameterType="string" id="findOne">
+		<![CDATA[
+		SELECT * FROM member WHERE loginId= #{loginId} 
+		]]>
+	</select>
+	<!-- R전체 회원 확인 SQL -->
+	<select resultType="com.health.domain.MemberVO" id="findAll">
+		<![CDATA[
+		SELECT * FROM member 
+		]]>
+	</select>
+	<!-- R학번으로 확인 SQL -->
+	<select resultType="com.health.domain.MemberVO" id="findOneStudent">
+		<![CDATA[
+		SELECT * FROM member WHERE studentId= #{studentId} 		
+		]]>
+	</select>	
+	
+	<!-- D회원탈퇴 SQL -->
+	<delete parameterType="string" id="delete">
+		<![CDATA[
+		DELETE member WHERE loginId=#{loginId} 
+		]]>
+	</delete>
+	<!-- U 회원정보 수정, 마이페이지 SQL -->
+	<update parameterType="com.health.domain.MemberVO"  id="update" >
+		<![CDATA[
+		UPDATE member 
+		SET pwd=#{pwd}, 
+		studentId=#{studentId}, 
+		mStatus=#{mStatus}, 
+		name=#{name}, 
+		phone=#{phone}, 
+		email=#{email}, 
+		accountBank=#{accountBank}, 
+		accountNo=#{accountNo} 
+		WHERE loginId=#{loginId}
+		]]>
+	</update>
+</mapper>
+
+
+
+

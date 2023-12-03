@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/*사이드바 영역 정하기*/
+.sidenav {
+  width: 20%; /*사이드바 폭*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcedaa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: none;
+}
+/*메인영역 폭 정하기*/
+.main-content {
+  width: 80%; /*메인영역 폭*/
+/*  background-color: #fdf5e6;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 55px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #363636;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: #a9cfe2;
+}
+/*메뉴 시작 상단 간격 띄우기*/
+#notice {
+  margin-top: 50px;;
+}
+
+/*개인정보에 해당하는 영역 간격 띄우기*/
+#spacing {
+  margin-bottom: 30px; /* 원하는 간격만큼의 값을 설정 */
+}
+
+/*사이드바버튼 이미지*/
+.sidenav img {
+  display: block;
+  text-align: center;
+  /*  vertical-align: middle;*/
+  margin: auto;
+  padding-top: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-height: 45px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 158px;
+  }
+}
+/*메인 영역*/
+.main-content {
+  display: flex;
+  height: 100%;
+}
+
+.page-title {
+  height: 10%;
+/*  border: 1px solid;*/
+}
+
+/*메인 타이틀 위치 조정*/
+.page-title h2{
+  margin-left: 50px;
+}
+
+/*메인 컨텐츠 영역*/
+.page-content {
+  margin-left: 50px;
+  margin-top: 5%;
+} 
+
+/* 회원가입 폼 */
+.signup {
+  text-align: center;
+  height: 100%;
+}
+
+.signup table {
+  width: 50%;
+  height: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.signup th,
+.signup td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.signup th {
+  background-color: #f2f2f2;
+}
+
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 2px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup input[type="radio"] {
+  margin-right: 5px;
+}
+
+.signup input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup #submit-container {
+  text-align: center;
+}
+
+.signup input[type="submit"]:hover {
+  background-color: #45a049;
+}
+

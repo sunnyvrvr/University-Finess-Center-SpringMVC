@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../resources/css/signup.css" />
+    <script src="../resources/js/signup.js"></script>
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidenav">
+        <img src="/resources/image/logo.jpg" class="img" />
+        <a href="./notice" id="notice">공지사항</a>
+        <a href="./health" id="health">헬스장이용 신청</a>
+        <a href="./gxprogram" id="gxprogram">GX 프로그램 신청</a>
+        <a href="./locker" id="locker">라커 신청</a>
+        <a href="./cart" id="cart">장바구니</a>
+        <a href="./myhistory" id="spacing">나의 이용 내역</a>
+
+        <a href="./signup" id="signupBtn">회원가입</a>
+        <a href="./login" id="loginBtn">로그인</a>
+ <!--   <a href="./mypage" id="myPageBtn">마이페이지</a>  -->
+        <a href="./logout" id="logoutBtn">로그아웃</a>
+      </div>
+      <div class="main-content">
+        <div class="page-title">
+          <h2>회원가입</h2>
+        </div>
+        <div class="page-content">
+          <form class="signup" method="post" action="/signup">
+            <table cellspacing="0">
+              <tr>
+                <th>아이디</th>
+                <td>
+                  <input type="text" name="loginId" required />
+                  <input
+                    type="button"
+                    name="iddupchk"
+                    value="아이디 중복확인"
+                    a
+                    href="./iddupchk"
+                  />
+                  <span id="res"></span>
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호</th>
+                <td>
+                  <input class="pwd" type="password" name="pwd" required />
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                  <input
+                    class="pwd confirm"
+                    type="password"
+                    name="pwd2"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>학번</th>
+                <td>
+                  <input
+                    class="studentId"
+                    type="text"
+                    name="studentId"
+                    required
+                  />
+                  <input
+                    type="button"
+                    name="studentIddupchk"
+                    value="학번 확인"
+                  />
+                  <span id="res"></span>
+                </td>
+              </tr>
+              <tr>
+                <th>재학여부</th>
+                <td>
+                  <input
+                    type="radio"
+                    id="student"
+                    name="mStatus"
+                    value="재학생"
+                  />
+                  <label for="student">재학생</label>
+                  <input
+                    type="radio"
+                    id="graduate"
+                    name="mStatus"
+                    value="졸업생"
+                  />
+                  <label for="graduate">졸업생</label>
+                </td>
+              </tr>
+              <tr>
+                <th>이름</th>
+                <td><input class="name" type="text" name="name" required /></td>
+              </tr>
+              <tr>
+                <th>전화번호</th>
+                <td>
+                  <input class="phone" type="text" name="phone" required />
+                </td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td>
+                  <input class="email" type="email" name="email" required />
+                </td>
+              </tr>
+              <tr>
+                <th>계좌은행</th>
+                <td>
+                  <input class="accountBank" type="text" name="accountBank" />
+                </td>
+              </tr>
+              <tr>
+                <th>계좌번호</th>
+                <td>
+                  <input class="accountNo" type="text" name="accountNo" />
+                </td>
+              </tr>
+				<tr id="submit-container">
+				  <td colspan="2"><input type="submit" value="가입하기" id="submit" /></td>
+				</tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+/*사이드바 영역 정하기*/
+.sidenav {
+  width: 20%; /*사이드바 폭*/
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fcedaa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border: none;
+}
+/*메인영역 폭 정하기*/
+.main-content {
+  width: 80%; /*메인영역 폭*/
+/*  background-color: #fdf5e6;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 55px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #363636;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: #a9cfe2;
+}
+/*메뉴 시작 상단 간격 띄우기*/
+#notice {
+  margin-top: 50px;
+}
+
+/*개인정보에 해당하는 영역 간격 띄우기*/
+#spacing {
+  margin-bottom: 30px; /* 원하는 간격만큼의 값을 설정 */
+}
+
+/*사이드바버튼 이미지*/
+.sidenav img {
+  display: block;
+  text-align: center;
+  /*  vertical-align: middle;*/
+  margin: auto;
+  padding-top: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-height: 45px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 158px;
+  }
+}
+
+.page-title {
+  height: 10%;
+/*  border: 1px solid;*/
+}
+
+/*메인 타이틀 위치 조정*/
+.page-title h2{
+  margin-left: 50px;
+}
+
+/*메인 컨텐츠 영역*/
+.page-content {
+  height: 30%;
+  margin-top: 5%; 
+  margin-left: 50px;
+} 
+/*테이블*/
+table.htable {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(243, 253, 240);
+    border-top: 1px solid rgb(74, 152, 59);
+    border-bottom: 1px solid rgb(74, 152, 59);
+    border-right: 1px solid rgb(155, 155, 155);
+    border-left: 1px solid rgb(155, 155, 155);    
+    text-align: center;
+} 
+
+td {
+    border: 1px solid rgb(155, 155, 155);
+    text-align: left;
+}
+
+/* a 태그에 대한 스타일 추가 */
+td:first-child a {
+  font-weight: bold;
+  color: inherit; /* a 태그의 기본색상 사용 */
+  text-decoration: none; /* 밑줄 제거 */
+  border: none !important; /* border 없애기 */
+}

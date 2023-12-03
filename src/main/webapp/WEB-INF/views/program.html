@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/resources/css/program.css" />
+    <script src="/resources/js/program.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <title>프로그램 상세</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidenav">
+        <img src="/resources/image/logo.jpg" class="img"  />
+        <a href="./notice" id="notice">공지사항</a>
+        <a href="./health" id="health">헬스장이용 신청</a>
+        <a href="./gxprogram" id="gxprogram">GX 프로그램 신청</a>
+        <a href="./locker" id="locker">라커 신청</a>
+        <a href="./cart" id="cart">장바구니</a>
+        <a href="./myhistory" id="spacing">나의 이용 내역</a>
+
+        <a href="./signup" id="signupBtn">회원가입</a>
+        <a href="./login" id="loginBtn">로그인</a>
+        <a href="./mypage" id="myPageBtn">마이페이지</a>
+        <a href="./logout" id="logoutBtn">로그아웃</a>
+      </div>
+      <div class="main-content">
+        <div class="page-title">
+          <h2>프로그램 상세</h2>
+        </div>
+        <div class="page-content">
+          <div class="top-content">
+            <div class="image-content">        
+             <div class="thumbnail" >
+              <img src="" alt="프로그램썸네일"/>
+             </div>
+            </div>
+            <div class="basic-content">
+             프로그램명 <span class="programname" id="programname"></span><br>
+             가격     <span class="programprice" id="programprice"></span><br><br>
+				    <button id="addcart">장바구니 추가</button>
+            </div>
+          </div>
+          <div class="bottom-content">
+            프로그램 장소 <span class="programcenter" id="programcenter"></span><br>
+            프로그램 정원 <span class="programmaxcapacity" id="programmaxcapacity"></span> 명<br>
+            프로그램 시간 <span class="programtime" id="programtime"></span><br>
+            프로그램 설명 <span class="programdetail" id="programdetail"></span><br>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
